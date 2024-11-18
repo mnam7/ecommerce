@@ -1,6 +1,7 @@
 import './navBar.css'
-import CartWidget from '../CartWidget.js'
+import CartWidget from '../../common/CartWidget.js'
 import {FaSearch} from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 const NavComponent =() => {
@@ -9,17 +10,20 @@ const NavComponent =() => {
         <div className="container-navbar">
           <nav className="nav">
            <div className="logo">
-              <p className="logo-text">E-ticketing</p>
+              <Link to="/"><p className="logo-text">E-ticketing</p></Link>
            </div>
            <ul className="menu">
             <li>
-              <a className="nav-link" href="#fsdf">Conciertos</a>
+              {/*<a className="nav-link" href="#fsdf">Conciertos</a>*/}
+              <Link to="/category/clothing">Clothing</Link>
             </li>
             <li>
-              <a className="nav-link" href="#dsf">Teatros</a>
+              {/*<a className="nav-link" href="#dsf">Teatros</a>*/}
+              <Link to="/category/jewelery">Jewelery</Link>
             </li>
             <li>
-              <a className="nav-link" href="#sdsd">Deportes</a>
+              {/*<a className="nav-link" href="#sdsd">Deportes</a>*/}
+              <Link to="/category/electronics">Electronics</Link>      
             </li>
            </ul>
            <div className="searchbar">
